@@ -1,0 +1,169 @@
+        body {
+            font-family: 'Roboto Mono';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+            text-shadow: rgb(46, 45, 45) 0.02em 0.02em 10px;
+            animation: fadeInUp 1s ease-out forwards;
+            background-image: linear-gradient(180deg, #ffa7c5, #bd6f89);
+            transition: color 0.5s, background-color 0.5s;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fb92b5;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            animation: fadeInDown 1s ease-out;
+            text-shadow: rgb(46, 45, 45) 0.02em 0.02em 5px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            color: #fff;
+            background-color: rgb(49, 49, 49);
+            padding: 120px 20px 50px;
+            text-align: center;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .tech-stack img {
+            width: 100px; /* Set the size of your logos */
+            margin: 10px;
+            filter: drop-shadow(0px 2px 2px black);
+        }
+        .profile{
+            background-image: none;
+            border-radius: 25px;
+            animation: fadeInUp 1.5s ease-out forwards;
+            padding-top: 2rem;
+            box-shadow: 0px 5px 7px rgb(45,45,45);
+        }
+        .hidden {
+            opacity: 0;
+            transition: all 1s; 
+        }
+        .shown {
+            opacity: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+        .details{
+            box-shadow: 0px 0px 0px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #pic{
+            height: 20rem;
+            width: 20rem;
+            border-radius: 50%;
+        }
+        #about{ 
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+            padding-top: 5px;
+            background-image: linear-gradient(180deg, #bd6f89, rgb(49,49,49));
+            transition: color 0.5s, background-color 0.5s;
+        }
+        #contact {
+            padding-top: 5rem;
+            color: #fff;
+            text-shadow: rgb(46, 45, 45) 0.02em 0.02em 10px;
+        }
+        @media (min-aspect-ratio: 16/9) {
+            .details{
+                display: flex;
+                margin-right: 2rem;
+                margin-left: 2rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                padding-top: 2rem;
+            }
+            #bio{
+                min-width: 50vh;
+                margin-right: 10rem;
+                padding-top: 5em;
+            }
+            #pic{
+                margin-left: 5vh;
+                margin-right: 5rem;
+            }
+        }
+        @media (max-aspect-ratio: 15/9) {
+            nav {
+                display: inline;
+                justify-content: space-evenly;
+            }
+            nav a{
+                margin-left: 15vw;
+            }
+            .profile {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                font-size: small;
+            }
+            .details {
+                padding-top: 0;
+            }
+            #pic {
+                height: 10rem;
+                width: 10rem;
+                border-radius: 50%;
+            }
+        }
+        
